@@ -1,0 +1,64 @@
+<mxfile host="65bd71144e">
+    <diagram name="第 1 页" id="elOXe_rlj2K5LTCmzp6F">
+        <mxGraphModel dx="1127" dy="585" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="PE9Bk9Gne3u1tOwH-Hau-1" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;链表 LinkedList&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF6666;" parent="1" vertex="1">
+                    <mxGeometry x="320" width="170" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="PE9Bk9Gne3u1tOwH-Hau-3" value="head" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=24;fontColor=#FF6666;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="160" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="PE9Bk9Gne3u1tOwH-Hau-6" value="data&lt;br&gt;next" style="shape=lineEllipse;perimeter=ellipsePerimeter;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=24;fontColor=#FF6666;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="160" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="PE9Bk9Gne3u1tOwH-Hau-8" value="" style="endArrow=classic;html=1;rounded=0;fontSize=24;fontColor=#FF6666;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="PE9Bk9Gne3u1tOwH-Hau-6" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="110" y="210" as="sourcePoint"/>
+                        <mxPoint x="160" y="160" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="110" y="200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="PE9Bk9Gne3u1tOwH-Hau-9" value="data&lt;br&gt;next" style="shape=lineEllipse;perimeter=ellipsePerimeter;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=24;fontColor=#FF6666;" parent="1" vertex="1">
+                    <mxGeometry x="373.5" y="160" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="PE9Bk9Gne3u1tOwH-Hau-11" value="data&lt;br&gt;next" style="shape=lineEllipse;perimeter=ellipsePerimeter;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=24;fontColor=#FF6666;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="160" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="PE9Bk9Gne3u1tOwH-Hau-12" value="" style="endArrow=classic;html=1;rounded=0;fontSize=24;fontColor=#FF6666;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" source="PE9Bk9Gne3u1tOwH-Hau-9" target="PE9Bk9Gne3u1tOwH-Hau-11" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="380" as="sourcePoint"/>
+                        <mxPoint x="450" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="PE9Bk9Gne3u1tOwH-Hau-16" value="" style="endArrow=classic;html=1;rounded=0;fontSize=24;fontColor=#FF6666;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="PE9Bk9Gne3u1tOwH-Hau-9" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="270" y="220" as="sourcePoint"/>
+                        <mxPoint x="480" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="PE9Bk9Gne3u1tOwH-Hau-23" value="null" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=24;fontColor=#FF6666;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="160" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="PE9Bk9Gne3u1tOwH-Hau-24" value="" style="endArrow=classic;html=1;rounded=0;fontSize=24;fontColor=#FF6666;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.95;exitY=0.763;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="PE9Bk9Gne3u1tOwH-Hau-11" target="PE9Bk9Gne3u1tOwH-Hau-23" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="380" as="sourcePoint"/>
+                        <mxPoint x="450" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="PE9Bk9Gne3u1tOwH-Hau-25" value="头部" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontColor=#FF6666;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="110" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="PE9Bk9Gne3u1tOwH-Hau-26" value="尾部" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontColor=#FF6666;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="110" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="PE9Bk9Gne3u1tOwH-Hau-27" value="1. head 指向第一个 node 节点&lt;br&gt;2. next 指向下一节点&lt;br&gt;3. next 指向 null 时到达尾部" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=24;fontColor=#FF6666;horizontal=1;labelPosition=center;verticalLabelPosition=middle;textDirection=ltr;" parent="1" vertex="1">
+                    <mxGeometry x="241.75" y="270" width="326.5" height="150" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
