@@ -3,25 +3,56 @@
  * @Author     : wangchao
  * @Date       : 2023-11-01 10:25
  * @LastAuthor : wangchao
- * @LastTime   : 2023-11-01 17:09
+ * @LastTime   : 2023-11-06 13:25
  * @desc       : 哈希表实现
  */
 
 class HashTable<T> {
   // 存放桶的数组
-  // private storage: [string, T][][] = [];
-  storage: [string, T][][] = [];
+  private storage: [string, T][][] = [];
   // 桶的长度
   private length: number = 7;
   // 已存放元素的总数
   private count: number = 0;
 
   /**
+   * @desc  : 判断是否质数
+   * @param  {number} num：数字
+   * @return {any} 是否质数
+   */
+  private isPrime(num: number): boolean {
+    const sqrt = Math.sqrt(num);
+    for (let i = 2; i <= sqrt; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  /**
+   * @desc  : 获取新质数
+   * @param  {number} num：数字
+   * @return {any} 处理后的质数
+   */
+  getNewPrime(num: number): number {
+    while (!this.isPrime(num)) {
+      num++;
+    }
+    // 最小容量为7
+    if (num < 7) {
+      num = 7;
+    }
+    return num;
+  }
+
+  /**
    * @desc  : 修改哈希表长度
    * @param  {number} newLength：新长度
    */
   private resize(newLength: number) {
-    this.length = newLength;
+    // 获取质数
+    this.length = this.getNewPrime(newLength);
 
     const _oldStorage = this.storage;
 
@@ -153,16 +184,13 @@ class HashTable<T> {
         this.count--;
 
         const loadFactor = this.count / this.length;
-        if (loadFactor < 0.25 && this.length > 7) {
-          // 考虑节约空间，当加载因子 < 0.25 时，则需缩容
+        if (loadFactor < 0.25 && this.length > 7)
+          // 考虑节约空间，当加载因子 < 0.25 时
           this.resize(Math.floor(this.length / 2));
-        }
-
-        return tupleValue;
       }
-    }
 
-    return undefined;
+      return tupleValue;
+    }
   }
 }
 
@@ -178,5 +206,8 @@ hashTable.put("abf", 1);
 hashTable.delete("aba");
 hashTable.delete("abb");
 hashTable.delete("abc");
+hashTable.delete("abd");
+hashTable.delete("abe");
+hashTable.delete("abf");
 
 console.log(hashTable);
