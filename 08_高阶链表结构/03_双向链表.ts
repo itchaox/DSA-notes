@@ -2,12 +2,12 @@
  * @Version    : v1.00
  * @Author     : wangchao
  * @Date       : 2024-03-26 17:02
- * @LastAuthor : itchaox
- * @LastTime   : 2024-03-29 00:10
+ * @LastAuthor : wangchao
+ * @LastTime   : 2024-03-29 14:56
  * @desc       :
  */
 
-import { DoublyNode } from './LinkedNode';
+import { DoublyNode } from "./LinkedNode";
 
 class DoublyLinkedList<T> {
   head: DoublyNode<T> | null = null;
@@ -16,10 +16,12 @@ class DoublyLinkedList<T> {
 
   constructor() {}
 
+  // 获取链表长度
   get Size(): number {
     return this.length;
   }
 
+  // 尾部插入节点
   append(value: T): void {
     const newNode = new DoublyNode(value);
 
@@ -68,7 +70,7 @@ class DoublyLinkedList<T> {
       current = current.next;
     }
 
-    console.log(_arr.join(' -> '));
+    console.log(_arr.join(" -> "));
   }
 
   // 反向遍历
@@ -81,7 +83,7 @@ class DoublyLinkedList<T> {
 
       current = current.prev;
     }
-    console.log(_arr.join(' -> '));
+    console.log(_arr.join(" -> "));
   }
 
   // 根据索引获取当前节点
@@ -126,37 +128,55 @@ class DoublyLinkedList<T> {
 
   // 根据索引删除元素
   removeAt(position: number): T | null {
-    // 越界判断
+    // 1. 越界判断
     if (position < 0 || position >= this.length) return null;
 
-    // 无数据判断
-    if (this.length === 0) return null;
+    // 2. 合规情况分析
 
-    let index = 0;
     let current = this.head;
 
-    while (index++ < position && current) {
-      current = current.next;
+    // 2.1 删除头部
+    if (position === 0) {
+      // 只有一个节点
+      if (this.length === 1) {
+        this.head = null;
+        this.tail = null;
+      } else {
+        // 多个节点
+        this.head = this.head!.next;
+        this.head!.prev = null;
+      }
+    } else if (position === this.length - 1) {
+      // 2.2 删除尾部
+      current = this.tail;
+
+      this.tail = this.tail!.prev;
+      this.tail!.next = null;
+    } else {
+      // 2.3 其余情况
+      const node = this.getNodeByPosition(position);
+      current = node;
+
+      node!.prev!.next = node!.next;
+      node!.next!.prev = node!.prev;
     }
 
-    if (current!.prev && current!.next) {
-      current!.prev!.next = current!.next;
-      current!.next!.prev = current!.prev;
-    }
+    this.length--;
 
-    // return current;
+    return current ? current.value : null;
   }
 }
 
 const doublyLinkedList = new DoublyLinkedList<string>();
 
-doublyLinkedList.append('aaa');
-doublyLinkedList.append('bbb');
-doublyLinkedList.append('ccc');
-doublyLinkedList.insert('测试', 2);
+doublyLinkedList.append("aaa");
+doublyLinkedList.append("bbb");
+doublyLinkedList.append("ccc");
+doublyLinkedList.insert("测试", 2);
 
-doublyLinkedList.insert('第一', 0);
+doublyLinkedList.insert("第一", 0);
 
 doublyLinkedList.removeAt(0);
-doublyLinkedList.postTraverse();
+// doublyLinkedList.postTraverse();
 doublyLinkedList.traverse();
+console.log(doublyLinkedList.Size);
