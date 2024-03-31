@@ -1,4 +1,4 @@
-class Heap<T> {
+export default class Heap<T> {
   // 存储堆元素
   private data: T[] = [];
 
@@ -120,12 +120,14 @@ class Heap<T> {
   }
 }
 
-const heap = new Heap<number>([9, 11, 20, 56, 23, 45]);
+// const heap = new Heap<number>([9, 11, 20, 56, 23, 45]);
+const heap = new Heap<number>();
 
-// heap.insert(1);
-// heap.insert(4);
-// heap.insert(15);
+heap.insert(1);
+heap.insert(4);
+heap.insert(15);
 
-// console.log(heap.extract());
+console.log(heap.extract());
+console.log(heap.extract());
 
 console.log(heap);
