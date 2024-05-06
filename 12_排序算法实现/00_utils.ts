@@ -3,7 +3,7 @@
  * @Author     : itchaox
  * @Date       : 2024-04-02 13:11
  * @LastAuthor : itchaox
- * @LastTime   : 2024-04-02 14:20
+ * @LastTime   : 2024-05-06 00:16
  * @desc       : 工具集合
  */
 
@@ -44,4 +44,11 @@ export function testSort(sortFn: Function) {
   console.log('排序后：', newArr);
 
   console.log('排序是否成功？', isSort(newArr));
+}
+
+// 两数交换
+export function swap(arr: number[], i: number, j: number) {
+  const temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
 }
