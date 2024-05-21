@@ -3,7 +3,7 @@
  * @Author     : itchaox
  * @Date       : 2024-05-09 12:35
  * @LastAuthor : itchaox
- * @LastTime   : 2024-05-10 11:07
+ * @LastTime   : 2024-05-10 17:16
  * @desc       :
  */
 
@@ -11,9 +11,8 @@
 function lengthOfLongestSubstring(s: string): number {
   const n = s.length;
 
-  let m = 0;
+  let max = 0;
   let l = 0;
-
   const map = new Map<string, number>();
 
   for (let r = 0; r < n; r++) {
@@ -24,13 +23,11 @@ function lengthOfLongestSubstring(s: string): number {
 
     map.set(string, r);
 
-    // 每次循环时 r 会增加
-    const c = r - l + 1;
-
-    m = Math.max(m, c);
+    const current = r - l + 1;
+    max = Math.max(max, current);
   }
 
-  return m;
+  return max;
 }
 
 let s1 = 'abcabcbb';
