@@ -3,7 +3,7 @@
  * @Author     : itchaox
  * @Date       : 2024-05-22 12:26
  * @LastAuthor : itchaox
- * @LastTime   : 2024-05-22 22:08
+ * @LastTime   : 2024-05-24 17:26
  * @desc       :
  */
 
@@ -22,33 +22,35 @@ function flatten(root: TreeNode | null): void {
   // 边界判断
   if (!root) return;
 
-  // 使用栈结构
+  // 使用栈结构处理
   const stack = [root];
 
-  // 声明变量存储前一个元素
   let pre: TreeNode | null = null;
 
-  // 遍历栈结构
+  // 处理 stack 所有元素
   while (stack.length) {
-    // 出栈
-    const cur = stack.pop()!;
+    // 获取栈顶元素
+    const current = stack.pop()!;
 
-    // 处理前面元素
+    // 处理 pre 结构
     if (pre) {
-      pre.right = cur;
+      pre.right = current;
       pre.left = null;
     }
 
-    // 将当前元素的左右节点压入栈中
-    // 先将右节点入栈（先序遍历）
-    if (cur.right) {
-      stack.push(cur.right);
+    // 先序遍历：左子节点 -> 右子节点 -> 当前节点
+    // 所以右节点先入栈
+    if (current.right) {
+      stack.push(current.right);
     }
 
-    if (cur.left) {
-      stack.push(cur.left);
+    if (current.left) {
+      stack.push(current.left);
     }
 
-    pre = cur;
+    // 遍历过程中，更新 pre 数据
+    // FIXME 此处 stack 已经在它作为子节点的时候，入栈过
+
+    pre = current;
   }
 }
