@@ -3,9 +3,11 @@
  * @Author     : itchaox
  * @Date       : 2024-05-30 15:26
  * @LastAuthor : itchaox
- * @LastTime   : 2024-05-30 20:05
+ * @LastTime   : 2024-05-30 23:32
  * @desc       :
  */
+
+// 核心思想：双指针
 
 class ListNode {
   val: number;
