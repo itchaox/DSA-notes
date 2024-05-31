@@ -3,20 +3,10 @@
  * @Author     : itchaox
  * @Date       : 2024-05-22 12:26
  * @LastAuthor : itchaox
- * @LastTime   : 2024-05-24 17:26
+ * @LastTime   : 2024-05-31 12:40
  * @desc       :
  */
-
-class TreeNode {
-  val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
-  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.left = left === undefined ? null : left;
-    this.right = right === undefined ? null : right;
-  }
-}
+import { TreeNode } from '../Type/type';
 
 function flatten(root: TreeNode | null): void {
   // 边界判断
