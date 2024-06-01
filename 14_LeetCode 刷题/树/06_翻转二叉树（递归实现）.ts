@@ -3,7 +3,7 @@
  * @Author     : itchaox
  * @Date       : 2024-05-31 12:37
  * @LastAuthor : itchaox
- * @LastTime   : 2024-05-31 12:48
+ * @LastTime   : 2024-06-01 12:46
  * @desc       :
  */
 
@@ -25,5 +25,5 @@ function invertTree(root: TreeNode | null): TreeNode | null {
   // 递归处理所有层级
   root.left = invertTree(root.right);
   root.right = invertTree(left);
-  return null;
+  return root;
 }
