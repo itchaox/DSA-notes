@@ -3,9 +3,12 @@
  * @Author     : itchaox
  * @Date       : 2024-06-01 11:22
  * @LastAuthor : itchaox
- * @LastTime   : 2024-06-01 11:51
+ * @LastTime   : 2024-06-01 13:41
  * @desc       :
  */
+
+// 核心思想：递归
+
 import { TreeNode } from '../Type/type';
 
 function maxPathSum(root: TreeNode | null): number {
