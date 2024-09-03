@@ -3,9 +3,22 @@
  * @Author     : Wang Chao
  * @Date       : 2024-09-02 10:42
  * @LastAuthor : Wang Chao
- * @LastTime   : 2024-09-02 13:20
+ * @LastTime   : 2024-09-03 11:01
  * @desc       :
  */
+
+// FIXME 请实现栈结构，用数组形式
+
+// 需要包括以下方法
+/**
+ * 1. push
+ * 2. pop
+ * 3. peek
+ * 4. isEmpty
+ * 5. size
+ */
+
+// FIXME 实现栈
 
 class Stack<T> {
   private data: T[] = [];
@@ -31,10 +44,15 @@ class Stack<T> {
   }
 }
 
+// FIXME 测试结果
+
 const stack = new Stack();
 
 stack.push(1);
 stack.push(2);
 stack.push(3);
 
-export default Stack;
+console.log(stack.pop());
+console.log(stack.peek());
+console.log(stack.isEmpty());
+console.log(stack.size());
