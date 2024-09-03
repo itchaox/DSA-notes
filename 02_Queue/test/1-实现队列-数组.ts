@@ -19,11 +19,11 @@ class Queue<T> {
   }
 
   dequeue(): T | undefined {
-    return this.data.pop();
+    return this.data.shift();
   }
 
   peek(): T | undefined {
-    return this.data[this.data.length - 1];
+    return this.data[0];
   }
 
   isEmpty(): boolean {
