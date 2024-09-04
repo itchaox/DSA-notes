@@ -1,3 +1,11 @@
+/*
+ * @Version    : v1.00
+ * @Author     : Wang Chao
+ * @Date       : 2024-09-02 23:07
+ * @LastAuthor : Wang Chao
+ * @LastTime   : 2024-09-04 13:18
+ * @desc       :
+ */
 // 请实现单向队列结构，使用数组形式
 
 // 需要实现以下方法
@@ -30,7 +38,7 @@ class Queue<T> {
     return this.data.length === 0;
   }
 
-  size(): number {
+  get size(): number {
     return this.data.length;
   }
 }
@@ -45,4 +53,4 @@ queue.enqueue(3);
 console.log(queue.dequeue());
 console.log(queue.peek());
 console.log(queue.isEmpty());
-console.log(queue.size());
+console.log(queue.size);

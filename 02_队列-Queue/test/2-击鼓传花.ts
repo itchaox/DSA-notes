@@ -3,7 +3,7 @@
  * @Author     : Wang Chao
  * @Date       : 2024-09-03 14:39
  * @LastAuthor : Wang Chao
- * @LastTime   : 2024-09-03 15:05
+ * @LastTime   : 2024-09-04 13:52
  * @desc       :
  */
 
@@ -20,10 +20,9 @@
 
 // FIXME 实现
 function hotPhtato(data: string[], num: number): string {
-  const n = data.length;
-  const queue: string[] = [];
+  if (data.length === 0) return '';
 
-  if (n === 0) return '';
+  const queue: string[] = [];
 
   for (const s of data) {
     queue.push(s);
@@ -31,22 +30,20 @@ function hotPhtato(data: string[], num: number): string {
 
   while (queue.length > 1) {
     for (let i = 1; i < num; i++) {
-      const s = queue.shift()!;
-      queue.push(s);
+      const v = queue.shift()!;
+      queue.push(v);
     }
 
     queue.shift();
   }
 
-  return queue[0];
+  return queue.shift()!;
 }
 
 // FIXME 验证
-const data = ['a', 'b', 'c', 'd', 'e'];
-const num = 3;
 
-console.log(hotPhtato(data, num));
+console.log(hotPhtato(['a', 'b', 'c', 'd'], 3));
 
 // FIXME 时间和空间复杂度分析
-// 时间 O(n * m)
-// 空间 O(n)
+// 时间：O(n*m)
+// 空间：O(n)

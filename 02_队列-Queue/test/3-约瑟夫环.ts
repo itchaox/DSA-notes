@@ -3,7 +3,7 @@
  * @Author     : Wang Chao
  * @Date       : 2024-09-03 15:37
  * @LastAuthor : Wang Chao
- * @LastTime   : 2024-09-03 16:35
+ * @LastTime   : 2024-09-04 14:26
  * @desc       :
  */
 
@@ -38,5 +38,3 @@ console.log(LastNumber(5, 3));
 console.log(LastNumber(10, 17));
 
 // FIXME 时间和空间复杂度分析
-// 时间：O(n*m)
-// 空间：O(n)
