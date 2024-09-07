@@ -3,7 +3,7 @@
  * @Author     : Wang Chao
  * @Date       : 2024-09-02 23:07
  * @LastAuthor : Wang Chao
- * @LastTime   : 2024-09-04 13:18
+ * @LastTime   : 2024-09-07 18:50
  * @desc       :
  */
 // 请实现单向队列结构，使用数组形式
@@ -18,11 +18,10 @@
  */
 
 // FIXME 实现
-
 class Queue<T> {
   private data: T[] = [];
 
-  enqueue(value: T): void {
+  enqueue(value: T) {
     this.data.push(value);
   }
 
@@ -38,19 +37,24 @@ class Queue<T> {
     return this.data.length === 0;
   }
 
-  get size(): number {
+  size(): number {
+    return this.data.length;
+  }
+
+  get length(): number {
     return this.data.length;
   }
 }
 
 // FIXME 验证
-const queue = new Queue();
+const queue = new Queue<string>();
 
-queue.enqueue(1);
-queue.enqueue(2);
-queue.enqueue(3);
+queue.enqueue('1');
+queue.enqueue('2');
+queue.enqueue('3');
 
 console.log(queue.dequeue());
 console.log(queue.peek());
 console.log(queue.isEmpty());
-console.log(queue.size);
+console.log(queue.size());
+console.log(queue.length);
