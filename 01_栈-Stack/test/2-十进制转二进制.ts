@@ -3,32 +3,29 @@
  * @Author     : Wang Chao
  * @Date       : 2024-09-02 11:48
  * @LastAuthor : Wang Chao
- * @LastTime   : 2024-09-03 11:04
+ * @LastTime   : 2024-09-07 09:34
  * @desc       :
  */
 
 // 输入
 // 35;
 // 17;
-// 29;
 
 // 输出
-// 1001011
+// 100011
+// 10001
 
-function Ten2Two(value: any): string {
-  if (value < 0) return '';
-  if (value === 0) return '0';
-
-  const stack: number[] = [];
+function Ten2Two(num: number): string {
   let result = '';
+  const stack: number[] = [];
 
-  while (value > 0) {
-    const v = value % 2;
+  while (num > 0) {
+    const v = num % 2;
     stack.push(v);
-
-    value = Math.floor(value / 2);
+    num = Math.floor(num / 2);
   }
 
+  // stack
   while (stack.length > 0) {
     result += stack.pop();
   }
@@ -36,9 +33,8 @@ function Ten2Two(value: any): string {
   return result;
 }
 
-// FIXME 分析时间和空间复杂度
-
 // FIXME 测试结果
 console.log(Ten2Two(35));
 console.log(Ten2Two(17));
-console.log(Ten2Two(29));
+
+// FIXME 分析时间和空间复杂度

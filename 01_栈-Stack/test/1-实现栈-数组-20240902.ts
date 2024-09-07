@@ -3,7 +3,7 @@
  * @Author     : Wang Chao
  * @Date       : 2024-09-02 10:42
  * @LastAuthor : Wang Chao
- * @LastTime   : 2024-09-03 11:01
+ * @LastTime   : 2024-09-07 09:20
  * @desc       :
  */
 
@@ -19,11 +19,10 @@
  */
 
 // FIXME 实现栈
-
 class Stack<T> {
   private data: T[] = [];
 
-  push(value: T): void {
+  push(value: T) {
     this.data.push(value);
   }
 
@@ -45,12 +44,11 @@ class Stack<T> {
 }
 
 // FIXME 测试结果
+const stack = new Stack<string>();
 
-const stack = new Stack();
-
-stack.push(1);
-stack.push(2);
-stack.push(3);
+stack.push('1');
+stack.push('2');
+stack.push('3');
 
 console.log(stack.pop());
 console.log(stack.peek());
