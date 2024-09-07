@@ -3,7 +3,7 @@
  * @Author     : Wang Chao
  * @Date       : 2024-09-02 16:54
  * @LastAuthor : Wang Chao
- * @LastTime   : 2024-09-06 23:55
+ * @LastTime   : 2024-09-07 18:37
  * @desc       :
  */
 
@@ -18,6 +18,31 @@
 // true / false
 
 // FIXME 实现
-function isVaild() {}
+function isVaild(value: string): boolean {
+  const stack: string[] = [];
+
+  for (const v of value) {
+    switch (v) {
+      case '(':
+        stack.push(')');
+        break;
+      case '[':
+        stack.push(']');
+        break;
+      case '{':
+        stack.push('}');
+        break;
+      default:
+        if (v !== stack.pop()) {
+          return false;
+        }
+    }
+  }
+  return true;
+}
 
 // FIXME 验证
+console.log(isVaild('()[]{}'));
+console.log(isVaild('({[]})'));
+
+console.log(isVaild('[{]}'));
