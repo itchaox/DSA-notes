@@ -3,7 +3,7 @@
  * @Author     : Wang Chao
  * @Date       : 2024-09-02 10:42
  * @LastAuthor : Wang Chao
- * @LastTime   : 2024-09-07 09:20
+ * @LastTime   : 2024-09-18 16:16
  * @desc       :
  */
 
@@ -22,7 +22,7 @@
 class Stack<T> {
   private data: T[] = [];
 
-  push(value: T) {
+  push(value: T): void {
     this.data.push(value);
   }
 
@@ -46,9 +46,9 @@ class Stack<T> {
 // FIXME 测试结果
 const stack = new Stack<string>();
 
-stack.push('1');
-stack.push('2');
-stack.push('3');
+stack.push('a');
+stack.push('b');
+stack.push('c');
 
 console.log(stack.pop());
 console.log(stack.peek());
